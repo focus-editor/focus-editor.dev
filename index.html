@@ -1,0 +1,31 @@
+---
+layout: default
+---
+
+{% for post in paginator.posts %}
+    <h2>
+      <a href="{{ post.url }}" class="entry_title" rel="bookmark">{{ post.title }}</a> &nbsp;
+      <span class="entry_date">{{ post.date | date: "%d.%m.%Y" }}</span>
+    </h2>
+    {% if post.content contains site.excerpt_separator %}
+        <div class="entry">{{ post.excerpt }}</div>
+        <h4><a href="{{ post.url }}">Read more &rarr;</a></h4>
+    {% else %}
+        <div class="entry">{{ post.content }}</div>
+    {% endif %}
+    <br>
+    <hr>
+    <br>
+{% endfor %}
+
+<h4>
+    {% if paginator.previous_page %}
+        <a href="{% if paginator.previous_page == 1%}/{% else %}/page{{ paginator.previous_page }}{% endif %}" class="previous">&laquo; Back</a>
+    {% endif %}
+    {% if paginator.total_pages > 1 %}
+        <span class="page_number ">Page: {{ paginator.page }} of {{ paginator.total_pages }}</span>
+    {% endif %}
+    {% if paginator.next_page %}
+        <a href="/page{{ paginator.next_page }}" class="next">Forward &raquo;</a>
+    {% endif %}
+</h4>

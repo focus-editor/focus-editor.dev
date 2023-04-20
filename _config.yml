@@ -1,0 +1,6 @@
+theme: jekyll-theme-midnight
+title: Ivan Ivanov's blog
+description: notes, thoughts, and opinions on programming
+excerpt_separator: "<!--more-->"
+paginate: 20
+url: http://ivanovs.info

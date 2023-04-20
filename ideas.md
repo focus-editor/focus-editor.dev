@@ -1,0 +1,1 @@
+- Premature generalisation in Rust - why I try not to do it

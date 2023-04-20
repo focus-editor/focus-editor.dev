@@ -1,0 +1,21 @@
+---
+---
+
+@import "{{ site.theme }}";
+
+section #title h1 {
+    font-size: 36px;
+    line-height: 36px;
+}
+
+.wrapper {
+    max-width: 900px;
+}
+
+section {
+    max-width: 900px;
+}
+
+.credits {
+    font-size: 10px;
+}
