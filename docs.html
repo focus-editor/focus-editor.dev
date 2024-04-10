@@ -2,6 +2,7 @@
 <html>
     <head>
         <title>Focus Editor</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="icon" type="image/x-icon" href="images/favicon.ico">
         <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.min.css">
         <link rel="stylesheet" href="css/style.css">
@@ -131,7 +132,7 @@ copy_whole_line_without_selection:      true
                         A project can override any settings that are present in the global config file.
                         Projects can specify one or more directories to add to the active workspace.
                     </p>
-                    <p>
+                    <p class="text-secondary">
                         NOTE: when overriding settings with you project config bear in mind that some of the settings, such as workspace dirs, build commands etc. will completely replace
                         the global settings, while other options (such as keymaps or the options in the <code>[[settings]]</code> block) will be merged with the global ones, allowing you
                         to only replace a few and leave the rest intact.
@@ -150,7 +151,8 @@ copy_whole_line_without_selection:      true
                         In the editor, executing the <code>Switch To Project</code> command will display a menu of available projects to switch to.
                         When you switch to a project, Focus scans the configured workspace directories and loads all text files.
                         Commands such as <code>Search In Workspace</code> will operate over all loaded files.
-                        <br />
+                    </p>
+                    <p class="text-secondary">
                         NOTE: when you switch to project or modify the list of workspace dirs in any way, the existing workspace will be removed and a new one will be scanned.
                     </p>
                     <p>
