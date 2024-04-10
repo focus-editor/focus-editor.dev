@@ -1,5 +1,0 @@
-- The Rust book chapter on closures show exactly how not to write code
-- The code in question can be written simpler
-- Some people may think this is how they should write this code from the start
-- Examples
-- Disclaimer (I think that other stuff like splitting lib.rs and main.rs or using types to validate params is good)

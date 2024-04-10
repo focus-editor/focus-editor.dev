@@ -1,6 +1,0 @@
-- Tell about the game I'm working on, and why
-- Old-style floating point. A little bit of history
-- Why ST registers are a pain in the ass
-- Discovered the use of XMM registers
-- Frustration with cmpss
-- Found ucomiss
