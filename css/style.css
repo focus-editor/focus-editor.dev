@@ -1,0 +1,130 @@
+body {
+
+}
+
+.btn-primary {
+    --bs-btn-bg: #268484FF;
+    --bs-btn-border-color: #26B2B2FF;
+    --bs-btn-hover-bg: #196666FF;
+    --bs-btn-hover-border-color: #196666FF;
+}
+
+.btn:hover {
+    text-decoration: none;
+}
+
+.container-lg {
+    max-width: 1500px;
+}
+
+.btn {
+    border-radius: 3px;
+}
+
+.b-divider {
+    width: 100%;
+    height: 3rem;
+    background-color: rgba(0, 0, 0, .1);
+    border: solid rgba(0, 0, 0, .15);
+    border-top-width: medium;
+    border-right-width: medium;
+    border-bottom-width: medium;
+    border-left-width: medium;
+    border-width: 1px 0;
+    box-shadow: inset 0 .2em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
+}
+
+.nav-link {
+    color: #33CCCCAA
+}
+
+.nav-link:hover {
+    color: #33CCCCAA
+}
+
+.side-nav {
+    border-left: 1px solid #d2d2d2;
+    padding-left: 10px;
+}
+
+.side-nav-item {
+  display:list-item;
+  list-style-type:none;
+  text-decoration:none;
+  color:#3d3d3e;
+  font-size:1em;
+  padding-top:5px;
+  padding-bottom:5px;
+  transition:transform .5s ease
+}
+.side-nav-item:hover {
+  transform:translateX(5px)
+}
+
+.side-title
+{
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 1em;
+  font-weight: 400;
+  color: #777;
+}
+
+.focus-bg {
+    content: "";
+    background: url('../images/logo.png') no-repeat;
+    background-position: left ;
+    background-size: 800px;
+    opacity: 1;
+}
+
+.card {
+    margin-bottom: 10px;
+    border-radius: 0;
+}
+
+.card-img-top {
+  object-fit: cover;
+  height: 200px;
+}
+
+header {
+    background-color: #18262FFF;
+}
+
+.nav-link {
+    color: #cccccc;
+}
+
+.nav-link:hover {
+    color: #eeeeee;
+}
+
+a {
+    color: #1C4449FF;
+}
+a:hover {
+    text-decoration: underline;
+}
+
+.code {
+    color: #1C4449FF;
+}
+
+.display-7 {
+    font-family: montserrat;
+    font-size: 30px;
+    font-weight: normal;
+}
+
+.key {
+    display: inline-block;
+    padding: 0 4px;
+    margin: 0 2px;
+    background-color: #f2f2f2;
+    border: 1px solid #dcdcdc;
+    border-radius: 4px;
+    font-size: 0.85em;
+    vertical-align: middle;
+}
+

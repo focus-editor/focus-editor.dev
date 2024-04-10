@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html data-bs-theme="dark">
+    <head>
+        <title>Focus Editor</title>
+        <link rel="icon" type="image/x-icon" href="favicon.ico">
+        <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/style.css">
+        <style>
+            body {
+                background-color: #18262FFF;
+            }
+            a {
+                color: #33CCCCAA;
+                text-decoration: none;
+            }
+            ::selection {
+                background: #1C4449FF;
+            }
+        </style>
+    </head>
+    <body>
+        <header class="d-flex justify-content-center py-2">
+            <ul class="nav nav-pills">
+                <li class="nav-item"><a href="" class="nav-link">Home</a></li>
+                <li class="nav-item"><a href="docs.html" class="nav-link">Documentation</a></li>
+            </ul>
+        </header>
+        <div class="container-lg px-4 py-5">
+            <div class="row flex-lg align-items-center g-5 py-5">
+                <div class="col-lg-6">
+                    <h1 class="display-1">Focus Editor<sup style="font-size: 18px; position: relative; top: -40px; color: #79919d;"> beta</sup></h1>
+                    <br />
+                    <p class="lead">A simple editor whose goal is to stand out of your way and let you do work.</p>
+                    <p class="lead">It's designed for people who value simplicity, are sensitive to input latency and do not require heavy language support in their editor.</p>
+                    <br />
+                    <br />
+                    <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+                        <a href="https://github.com/focus-editor/focus/releases" target="_blank" type="button"
+                            class="btn btn-primary px-4 me-md-2">Download Latest Release</a>
+                        <a href="https://github.com/focus-editor/focus" target="_blank" type="button"
+                            class="btn btn-outline-secondary px-4">View on GitHub</a>
+                    </div>
+                    <br />
+                    <p>Available for Windows, MacOS, and Linux</p>
+                    <p><a href="https://discord.gg/eSXquAzTmW">Official Discord server</a></p>
+                    <hr />
+                    <a href="https://ileonte.dev/focus-builds/">Nightly Builds</a> <span style="color: #79919d;">- built every 4 hours from the main branch</span>
+                </div>
+                <div class="col-10 col-sm-8 col-lg-6">
+                    <img src="images/focus.png" class="d-block mx-lg-auto img-fluid shadow-lg" alt="Focus Editor Screenshot"
+                        width="700" height="500" loading="lazy">
+                </div>
+            </div>
+        </div>
+        <div class="b-divider"></div>
+        <div id="about" class="container-lg px-4 py-5">
+            <div class="row flex-lg align-items-center g-5 py-5">
+                <div class="col-10 col-sm-8 col-lg-6">
+                    <a href="images/focus1.gif">
+                        <img src="images/focus1.gif" class="d-block mx-lg-auto img-fluid shadow-lg"
+                        alt="Focus Editor Screenshot" width="700" height="500" loading="lazy">
+                    </a>
+                </div>
+                <div class="col-lg-6">
+                    <h1 class="display-6">Simple and fast</h1>
+                    <br />
+                    <p class="lead">
+                        Focus deliberately doesn't include a lot of features, and its source code should be
+                        simple enough for people to easily add features to it if they want to.
+                        It is configured using a simple config file.
+                    </p>
+                    <p class="lead">We try to minimize input latency and maximize responsiveness. We also include relatively
+                        fast project search, which should work well for reasonably sized projects.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="b-divider"></div>
+        <div class="container col-xl-10 col-xxl-8 px-4 py-5">
+            <div class="row align-items-center g-lg-5 py-5">
+                <div class="col-lg-7 text-center text-lg-start">
+                    <h1 class="display-6">Easy to configure</h1>
+                    <br>
+                    <p class="lead">
+                        Focus is configured via simple text files.<br>
+                        Settings can be configured globally, or per-project.
+                    </p>
+                    <p class="lead">
+                        A project in this editor is just another config file that lives in the editor's projects directory
+                        and which you can switch to quickly, immediately applying all the settings from that file.
+                    </p>
+                    <p class="lead">Custom build commands can be created for your specific project needs.</p>
+                    <p class="lead">&nbsp;</p>
+                </div>
+                <div class="col-md-10 mx-auto col-lg-5 rounded" style="background-color: #1a2831">
+                    <code>
+                        <pre style="color: #d7d7d7;">
+
+<span style="color: #e67d74;">[[workspace]]</span>
+<span style="color: #e0ad70;">[workspace dirs]</span>
+/path/to/dir1
+/path/to/dir2
+
+<span style="color: #e67d74;">[[settings]]</span>
+maximize_on_start:              <span style="color: #d699b5;">false</span>
+open_on_the_biggest_monitor:    <span style="color: #d699b5;">true</span>
+<span style="color: #79919d;">...</span>
+
+<span style="color: #e67d74;">[[build commands]]</span>
+build_working_dir:      <span style="color: #79919d;">build working dir for all commands</span>
+open_panel_on_build:    <span style="color: #d699b5;">true</span>
+error_regex:            [compiler-specific error regex]
+auto_jump_to_error:     <span style="color: #d699b5;">false</span>
+
+<span style="color: #e0ad70;">[Debug Build And Run]</span>   <span style="color: #79919d;"># command name. Can be arbitrary</span>
+build_command:          jai main.jai
+build_working_dir:      <span style="color: #79919d;">working dir for this command only</span>
+timeout_in_seconds:     <span style="color: #d699b5;">5</span>
+run_command:            test.exe
+             </pre>
+                    </code>
+                </div>
+            </div>
+        </div>
+
+        <div class="b-divider"></div>
+
+        <div id="development" class="container-lg px-4 py-5">
+            <div class="row flex-lg align-items-center g-5 py-5">
+                <div class="col-10 col-sm-8 col-lg-6">
+                    <img src="images/github.png" class="d-block mx-lg-auto img-fluid shadow-lg"
+                        alt="Focus Editor Screenshot" width="700" height="500" loading="lazy">
+                </div>
+                <div class="col-lg-6">
+                    <h1 class="display-6">Development and Community</h1>
+                    <br />
+                    <p class="lead">
+                        Focus is open-source, and currently in active development.
+                        Focus is written the Jai programming language developed by <a href="https://en.wikipedia.org/wiki/Jonathan_Blow">Jonathan Blow</a>.
+                    </p>
+                    <p class="lead">
+                        We gratefully welcome contributions, however you have to have access to Jai, which is currently in closed beta. Please read the <a href="https://github.com/focus-editor/focus/blob/main/CONTRIBUTING.md">contributing guidelines</a> before starting any significant piece of work.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="b-divider"></div>
+
+        <div class="container-lg px-4 py-5 text-center" style="color: #79919d;">
+            Website design by <a href="https://github.com/maxamundsen">Max Amundsen</a>
+        </div>
+    </body>
+</html>
