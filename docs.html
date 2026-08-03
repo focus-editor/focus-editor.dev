@@ -1,192 +1,172 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
         <title>Focus Editor</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="icon" type="image/x-icon" href="images/favicon.ico">
-        <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.min.css">
         <link rel="stylesheet" href="css/style.css">
     </head>
     <body>
-        <header class="d-flex justify-content-center py-2">
-            <ul class="nav nav-pills">
-                <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
-                <li class="nav-item"><a href="docs.html" class="nav-link">Documentation</a></li>
-            </ul>
-        </header>
-        <br />
-        <div class="container">
-            <div class="row">
-                <div class="col-xs-12 col-lg-2">
-                    <div class="sticky-top" style="top: 2em">
-                        <h6 class="side-title">Documentation</h6>
-                        <nav class="side-nav">
-                            <a class="side-nav-item" href="#installation">Installation</a>
-                            <a class="side-nav-item" href="#global-config">Global Config</a>
-                            <a class="side-nav-item" href="#projects">Projects</a>
-                            <a class="side-nav-item" href="#faq">FAQ</a>
-                        </nav>
-                        <br />
-                        <br />
+        <header class="header__container">
+            <div class="header__content_container">
+                <a href="index.html">
+                    <div class="header__brand_container">
+                        <img alt="Focus Logo" src="images/favicon.ico" class="header__brand_logo"/>
+                        <h1 class="header__brand_title">Focus Editor</h1>
                     </div>
-                </div>
-                <div class="col-xs-12 col-lg col-pop">
-                    <!-- ======== INSTALLATION ======== -->
-                    <h2 class="display-7" id="installation">Installation</h2>
-                    <p>
-                        <a href="https://github.com/focus-editor/focus/releases" target="_blank">Download the executable</a> for your target platform and put it in any directory you like.
-                        <br /><br />
-                        Launch the executable. Once launched, it will generate its config files.
-                        <ul>
-                            <li>On Windows, it will create a <code>global.focus-config</code> file and a <code>projects</code> and <code>temp</code> folders next to itself (therefore, the directory must be writable).</li>
-                            <li>On macOS, these files will be found in <code>/Users/YOURNAME/Library/Application Support/dev.focus-editor/</code>.</li>
-                            <li>On Linux, these files will be found in <code>${XDG_CONFIG_HOME}/focus-editor/</code> (which usually expands to <code>${HOME}/.config/focus-editor</code>).</li>
-                        </ul>
+                </a>
+
+                <nav>
+                    <ul class="header__nav_container">
+                        <li class="header__nav_item"><a href="index.html" class="header__nav_link">Home</a></li>
+                        <li class="header__nav_item"><a href="docs.html" class="header__nav_link">Documentation</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+        <main class="main__container">
+            <div class="docs__container">
+                <nav class="docs_nav__container">
+                    <h2 class="docs_nav__title">Documentation</h2>
+                    <ul class="docs_nav__list">
+                        <li>
+                            <a class="docs_nav__item" href="#installation">Installation</a>
+                        </li>
+                        <li>
+                            <a class="docs_nav__item" href="#global-config">Global Config</a>
+                        </li>
+                        <li>
+                            <a class="docs_nav__item" href="#projects">Projects</a>
+                        </li>
+                        <li>
+                            <a class="docs_nav__item" href="#faq">FAQ</a>
+                        </li>
+                    </ul>
+                </nav>
+
+                <article class="docs__content_container">
+                    <h2 class="docs_section docs_title" id="installation">Installation</h2>
+                    <p class="docs_paragraph">
+                        <a class="link" href="https://github.com/focus-editor/focus/releases" target="_blank">
+                            Download the executable
+                        </a>
+                        for your target platform and put it in any directory you like.
                     </p>
-                    <p>
-                        After installing, you can edit the <a href="#global-config">global config</a> of the editor, or create one or more <a href="#projects">projects</a> to be able to quickly switch between them.
+                    <p class="docs_paragraph"> Launch the executable. Once launched, it will generate its config files. </p>
+
+                    <ul class="docs_unordered_list">
+                        <li class="docs_unordered_list_item">
+                            On Windows, it will create a <code class="docs_code">global.focus-config</code> file and a <code class="docs_code">projects</code> and <code class="docs_code">temp</code> folders next to itself (therefore, the directory must be writable).
+                        </li>
+                        <li class="docs_unordered_list_item">
+                            On macOS, these files will be found in <code class="docs_code">/Users/YOURNAME/Library/Application Support/dev.focus-editor/</code>.
+                        </li>
+                        <li class="docs_unordered_list_item">
+                            On Linux, these files will be found in <code class="docs_code">${XDG_CONFIG_HOME}/focus-editor/</code> (which usually expands to <code class="docs_code">${HOME}/.config/focus-editor</code>).
+                        </li>
+                    </ul>
+                    <p class="docs_paragraph">
+                        After installing, you can edit the <a class="link" href="#global-config">global config</a> of the editor, or create one or more <a class="link" href="#projects">projects</a> to be able to quickly switch between them.
                     </p>
-                    <br />
-                    <!-- ======== EDITOR CONFIGURATION ======== -->
-                    <h2 class="display-7" id="global-config">Global Config</h2>
-                    <p>
-                        The editor is configured using a simple text file called <code>global.focus-config</code>, which you can quickly open by opening the Command Palette
-                        (<span class="key">Alt</span>-<span class="key">X</span> by default) and selecting <code>Open Global Config</code>.
+
+                    <h2 class="docs_section docs_title mt-3" id="global-config">Global Config</h2>
+                    <p class="docs_paragraph">
+                        The editor is configured using a simple text file called <code class="docs_code">global.focus-config</code>, which you can quickly open by opening the Command Palette
+                        (<span class="key">Alt</span>-<span class="key">X</span> by default) and selecting <code class="docs_code">Open Global Config</code>.
                     </p>
-                    <p>
+                    <p class="docs_paragraph">
                         The config file is a simple text file which should be easy to read and edit to your liking. We suggest that you read through it to familiarize yourself with what options are available.
                     </p>
-                    <p>
-                        <ul>
-                            <li>
-                                Config files have a built-in smart highlighting, so it's best to edit them using Focus itself. In this way it should tell you about any potential problems it detects,
-                                such as invalid editor actions, duplicate key bindings or invalid file paths.
-                            </li>
-                            <li>
-                                When an active config file is saved the changes should be automatically applied. If you have edited any workspace directories, the workspace will be reloaded.
-                            </li>
-                            <li>
-                                You can see whether the config file you're editing is currently active by looking at the footer, which should have a label telling you it's active:<br />
-                                <img style="width: 500px;" alt="" src="images/active-config.png" />
-                            </li>
-                        </ul>
-                    </p>
-                    <p class="text-secondary">
+
+                    <ul class="docs_unordered_list">
+                        <li class="docs_unordered_list_item">
+                            Config files have a built-in smart highlighting, so it's best to edit them using Focus itself. In this way it should tell you about any potential problems it detects,
+                            such as invalid editor actions, duplicate key bindings or invalid file paths.
+                        </li>
+                        <li class="docs_unordered_list_item">
+                            When an active config file is saved the changes should be automatically applied. If you have edited any workspace directories, the workspace will be reloaded.
+                        </li>
+                        <li class="docs_unordered_list_item">
+                            You can see whether the config file you're editing is currently active by looking at the footer, which should have a label telling you it's active:<br />
+                            <img style="max-width: 31rem; width: 100%; margin-top: 1rem; aspect-ratio: 6.611;" alt="Active Config" src="images/active-config.png" />
+                        </li>
+                    </ul>
+
+                    <p class="docs_note">
                         NOTE: The base editor is not designed to be extensible in the same way Vim or Emacs are. Plugin support is not planned.
                         Any customization that is not found in the config file must be done by modifying the source code.
                         This is the tradeoff we are making to keep the upstream project as simple as possible,
                         while offering a simple and approachable codebase for those who do want to extend it.
                     </p>
-                    <br />
-                    <!-- ======== PROJECTS ======== -->
-                    <h2 class="display-7" id="projects">Projects</h2>
 
-                    <!--div class="card">
-                        <div class="card-body">
-                            <pre class="code">
-...
 
-[[settings]]
+                    <h2 class="docs_section docs_title mt-3" id="projects">Projects</h2>
 
-maximize_on_start:                      false
-open_on_the_biggest_monitor:            false
-cursor_as_block:                        true
-cursor_blink_time_in_seconds:           0
-highlight_selection_occurrences:        true
-disable_that_annoying_paste_effect:     true
-disable_file_open_close_animations:     true
-double_shift_to_search_in_workspace:    false
-tab_size:                               4
-insert_spaces_when_pressing_tab:        true
-strip_trailing_whitespace_on_save:      true
-smooth_scrolling:                       false
-scroll_beyond_last_line:                true
-line_height_scale_percent:              100
-max_editor_width:                       -1
-can_cancel_go_to_line:                  true
-copy_whole_line_without_selection:      true
-
-...
-
-[[keymap]]
-
-# - The first matching combination will be used, so order matters
-
-[editors]   # <- this means that the following key combos will apply only when editing text
-
-    # Key combination           Action
-    Alt-F4                      quit
-
-    Ctrl-D                      select_word_or_create_another_cursor
-    Ctrl-Shift-A                select_all_occurrences
-
-    Ctrl-Shift-D                duplicate_lines
-
-    ...
-                                </pre>
-                        </div>
-                    </div-->
-
-                    <p>
+                    <p class="docs_paragraph">
                         In Focus, a "project" is a user defined config file that contains project-specific settings.
                         A project can override any settings that are present in the global config file.
                         Projects can specify one or more directories to add to the active workspace.
                     </p>
-                    <p class="text-secondary">
+                    <p class="docs_note">
                         NOTE: when overriding settings with you project config bear in mind that some of the settings, such as workspace dirs, build commands etc. will completely replace
-                        the global settings, while other options (such as keymaps or the options in the <code>[[settings]]</code> block) will be merged with the global ones, allowing you
+                        the global settings, while other options (such as keymaps or the options in the <code class="docs_code">[[settings]]</code> block) will be merged with the global ones, allowing you
                         to only replace a few and leave the rest intact.
                     </p>
-                    <p><h5>Creating a new project</h5></p>
-                    <p>
-                        To create a new project, enter the <code>projects/</code> directory by selecting the command <code>Open Directory With Project Files</code> in the command palette
-                        and create a new file with the following naming scheme: <code>Your Project Name.focus-config</code>.
+
+                    <h3 class="docs_sub_title">Creating a new project</h3>
+                    <p class="docs_paragraph">
+                        To create a new project, enter the <code class="docs_code">projects/</code> directory by selecting the command <code class="docs_code">Open Directory With Project Files</code> in the command palette
+                        and create a new file with the following naming scheme: <code class="docs_code">Your Project Name.focus-config</code>.
                     </p>
-                    <p>
-                        When you first launch Focus, there will be an <code>Example Project.focus-config</code> available for
-                        reference in the <code>projects</code> directory.
+
+                    <p class="docs_paragraph">
+                        When you first launch Focus, there will be an <code class="docs_code">Example Project.focus-config</code> available for
+                        reference in the <code class="docs_code">projects</code> directory.
                     </p>
-                    <p><h5>Switching to project</h5></p>
-                    <p>
-                        In the editor, executing the <code>Switch To Project</code> command will display a menu of available projects to switch to.
+
+                    <h3 class="docs_sub_title">Switching to project</h3>
+                    <p class="docs_paragraph">
+                        In the editor, executing the <code class="docs_code">Switch To Project</code> command will display a menu of available projects to switch to.
                         When you switch to a project, Focus scans the configured workspace directories and loads all text files.
-                        Commands such as <code>Search In Workspace</code> will operate over all loaded files.
+                        Commands such as <code class="docs_code">Search In Workspace</code> will operate over all loaded files.
                     </p>
-                    <p class="text-secondary">
+
+                    <p class="docs_note">
                         NOTE: when you switch to project or modify the list of workspace dirs in any way, the existing workspace will be removed and a new one will be scanned.
                     </p>
-                    <p>
+
+                    <p class="docs_paragraph">
                         Alternatively, you can load projects at startup in one of the following ways:
-                        <ul>
-                            <li>By passing a project name as a parameter: <code>focus -project "Project Name"</code> or <code>focus -project path/to/project.focus-config</code>.</li>
-                            <li>By passing in a directory path which contains a file named <code>.focus-config</code> (not <code>[project name].focus-config</code>!). This file will be loaded as a Focus project.</li>
-                            <li>By launching Focus from a directory containing a file named <code>.focus-config</code>.</li>
-                        </ul>
                     </p>
-                    <p>
+
+                    <ul class="docs_unordered_list">
+                        <li class="docs_unordered_list_item">By passing a project name as a parameter: <code class="docs_code">focus -project "Project Name"</code> or <code class="docs_code">focus -project path/to/project.focus-config</code>.</li>
+                        <li class="docs_unordered_list_item">By passing in a directory path which contains a file named <code class="docs_code">.focus-config</code> (not <code class="docs_code">[project name].focus-config</code>!). This file will be loaded as a Focus project.</li>
+                        <li class="docs_unordered_list_item">By launching Focus from a directory containing a file named <code class="docs_code">.focus-config</code>.</li>
+                    </ul>
+
+                    <p class="docs_paragraph">
                         When a project is opened by any means it is remembered and can be then switched to using the Switch To Project command.
                     </p>
-                    <p class="text-secondary">
-                        Hint: if you want to load last project on startup, set <code>load_most_recent_project_on_start</code> to <code>true</code> in the config.
+                    <p class="docs_paragraph">
+                        Hint: if you want to load last project on startup, set <code class="docs_code">load_most_recent_project_on_start</code> to <code class="docs_code">true</code> in the config.
                     </p>
-                    <br />
 
-                    <!-- ======== FAQ ======== -->
-                    <h2 class="display-7" id="faq">FAQ</h2>
-                    <h5>How do I add syntax highlighting for language X?</h5>
-                    <p>
-                        Ask on our <a href="https://discord.gg/eSXquAzTmW">Discord server</a>. We might be able to add it or prioritize adding it.
+                    <h2 class="docs_section docs_title mt-3" id="faq">FAQ</h2>
+
+                    <h3 class="docs_sub_title">How do I add syntax highlighting for language X?</h3>
+                    <p class="docs_paragraph">
+                        Ask on our <a class="link" href="https://discord.gg/eSXquAzTmW">Discord server</a>. We might be able to add it or prioritize adding it.
                         In Focus syntax highlighting is done by writing a language lexer.
                         It is straightforward enough to add a lexer for a new language, but you have to have a Jai compiler.
                     </p>
-                    <h5>Is there a VIM mode?</h5>
-                    <p>
+                    <h3 class="docs_sub_title">Is there a VIM mode?</h3>
+                    <p class="docs_paragraph">
                         There isn't, and it's unlikely there ever will be in the base editor. Someone might fork the editor and add one someday.
                     </p>
-                    <br />
-                    <br />
-                </div>
+                </article>
             </div>
-        </div>
+        </main>
     </body>
 </html>
